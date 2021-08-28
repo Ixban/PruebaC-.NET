@@ -1,0 +1,6 @@
+C:\Users\Ixban\Documents\Proyecto\ModelLayer\bin\Debug\ModelLayer.dll
+C:\Users\Ixban\Documents\Proyecto\ModelLayer\bin\Debug\ModelLayer.pdb
+C:\Users\Ixban\Documents\Proyecto\ModelLayer\obj\Debug\ModelLayer.csproj.AssemblyReference.cache
+C:\Users\Ixban\Documents\Proyecto\ModelLayer\obj\Debug\ModelLayer.csproj.CoreCompileInputs.cache
+C:\Users\Ixban\Documents\Proyecto\ModelLayer\obj\Debug\ModelLayer.dll
+C:\Users\Ixban\Documents\Proyecto\ModelLayer\obj\Debug\ModelLayer.pdb

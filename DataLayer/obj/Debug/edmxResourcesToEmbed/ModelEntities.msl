@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="pruebaModelStoreContainer" CdmEntityContainer="pruebaEntities1">
+    <EntitySetMapping Name="LíneasCelulares">
+      <EntityTypeMapping TypeName="pruebaModel.LíneasCelulares">
+        <MappingFragment StoreEntitySet="LíneasCelulares">
+          <ScalarProperty Name="MobileLineId" ColumnName="MobileLineId" />
+          <ScalarProperty Name="MobileLine" ColumnName="MobileLine" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuarios">
+      <EntityTypeMapping TypeName="pruebaModel.usuarios">
+        <MappingFragment StoreEntitySet="usuarios">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Rol" ColumnName="Rol" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleDeLlamadas">
+      <EntityTypeMapping TypeName="pruebaModel.DetalleDeLlamadas">
+        <MappingFragment StoreEntitySet="DetalleDeLlamadas">
+          <ScalarProperty Name="CallDetailId" ColumnName="CallDetailId" />
+          <ScalarProperty Name="MobileLine" ColumnName="MobileLine" />
+          <ScalarProperty Name="CalledPartyNumber" ColumnName="CalledPartyNumber" />
+          <ScalarProperty Name="CalledPartyDescription" ColumnName="CalledPartyDescription" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="getDetallesDeLlamadas" FunctionName="pruebaModel.Store.getDetallesDeLlamadas">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="pruebaModel.getDetallesDeLlamadas_Result">
+          <ScalarProperty Name="CallDetailId" ColumnName="CallDetailId" />
+          <ScalarProperty Name="MobileLine" ColumnName="MobileLine" />
+          <ScalarProperty Name="CalledPartyNumber" ColumnName="CalledPartyNumber" />
+          <ScalarProperty Name="CalledPartyDescription" ColumnName="CalledPartyDescription" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getLineasCelulares" FunctionName="pruebaModel.Store.getLineasCelulares">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="pruebaModel.getLineasCelulares_Result">
+          <ScalarProperty Name="MobileLineId" ColumnName="MobileLineId" />
+          <ScalarProperty Name="MobileLine" ColumnName="MobileLine" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="LoginUsuario" FunctionName="pruebaModel.Store.LoginUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="pruebaModel.LoginUsuario_Result">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Rol" ColumnName="Rol" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getUsuarios" FunctionName="pruebaModel.Store.getUsuarios">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="pruebaModel.getUsuarios_Result">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Rol" ColumnName="Rol" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="userDelete" FunctionName="pruebaModel.Store.userDelete" />
+    <FunctionImportMapping FunctionImportName="UsuarioAdd" FunctionName="pruebaModel.Store.UsuarioAdd" />
+    <FunctionImportMapping FunctionImportName="GetUsuarioId" FunctionName="pruebaModel.Store.GetUsuarioId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="pruebaModel.GetUsuarioId_Result">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Rol" ColumnName="Rol" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UpdateUsuario" FunctionName="pruebaModel.Store.UpdateUsuario" />
+  </EntityContainerMapping>
+</Mapping>

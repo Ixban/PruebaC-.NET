@@ -1,0 +1,325 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Prueba</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="~/Css/styles.css" media="screen" />
+
+    -
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" media="screen" />-
+
+    <!--
+      # Optional Resources
+      Feel free to delete these if you don't need them in your project
+    -->
+</head>
+<body>
+    <div class="adminx-container">
+        <nav class="navbar navbar-expand justify-content-between fixed-top">
+            <a class="navbar-brand mb-0 h1 d-none d-md-block" href="#">
+                <img src="~/Css/icon.png" class="navbar-brand-image d-inline-block align-top mr-2" alt="">
+                Telefonos
+            </a>
+
+            <ul class="navbar-nav d-flex justify-content-end mr-2">
+                <li class="nav-item dropdown">
+                    <a class="nav-link avatar-with-name" id="navbarDropdownMenuLink" data-toggle="dropdown" href="#">
+                        <img src="~/Css/icon.png" class="d-inline-block align-top" alt="">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item text-danger" href="@Url.Action("LogOut", "Home")">Cerrar Sesion</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="adminx-sidebar expand-hover push">
+            <ul class="sidebar-nav">
+                <li class="sidebar-nav-item">
+                    <a href="@Url.Action("Index", "Usuario")" class="sidebar-nav-link active">
+                        <span class="sidebar-nav-icon">
+                            <i data-feather="user"></i>
+                        </span>
+                        <span class="sidebar-nav-name">
+                            Usuarios
+                        </span>
+                        <span class="sidebar-nav-end">
+
+                        </span>
+                    </a>
+                </li>
+
+                <li class="sidebar-nav-item">
+                    <a href="@Url.Action("Index", "Main")" class="sidebar-nav-link active">
+                        <span class="sidebar-nav-icon">
+                            <i data-feather="home"></i>
+                        </span>
+                        <span class="sidebar-nav-name">
+                            Listado Celulares
+                        </span>
+                        <span class="sidebar-nav-end">
+
+                        </span>
+                    </a>
+                </li>
+
+
+
+            </ul>
+        </div>
+
+        @RenderBody()
+        <!-- If you prefer jQuery these are the required scripts -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+        <script src="~/Scripts/vendor.js"></script>
+        <script src="~/Scripts/adminx.js"></script>
+
+        <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <!-- If you prefer vanilla JS these are the only required scripts -->
+        <!-- script src="./dist/js/vendor.js"></script>
+        <script src="./dist/js/adminx.vanilla.js"></script-->
+
+        <script>
+            $(document).ready(function () {
+                var table = $('[data-table]').DataTable({
+                    "language": {
+                        "url": "https://cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json"
+                    },
+                    "columns": [
+                        null,
+                        null,
+
+                        { "orderable": false }
+
+                    ],
+                    "order": [[1, "asc"]],
+                });
+
+                /* $('.form-control-search').keyup(function(){
+                  table.search($(this).val()).draw() ;
+                }); */
+            });
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                var table = $('[data-table-2]').DataTable({
+                    "language": {
+                        "url": "https://cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json"
+                    },
+                    "columns": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        { "orderable": true }
+
+                    ],
+                    "order": [[5, "asc"]],
+                });
+
+                /* $('.form-control-search').keyup(function(){
+                  table.search($(this).val()).draw() ;
+                }); */
+            });
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                var table = $('[data-table-3]').DataTable({
+                    "language": {
+                        "url": "https://cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json"
+                    },
+                    "columns": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        { "orderable": false }
+
+                    ],
+                    "order": [[1, "asc"]],
+                });
+
+                /* $('.form-control-search').keyup(function(){
+                  table.search($(this).val()).draw() ;
+                }); */
+            });
+        </script>
+
+        <script>
+            function openModal() {
+                document.getElementById("exampleModalLabel").innerHTML = "Crear Usuario";
+                document.getElementById("Action").setAttribute("onClick", "javascript: saveModal();");
+                document.getElementById("formUser").reset();
+                $("#exampleModal").modal();
+            }
+
+            function closeModal() {
+                document.getElementById("formUser").reset();
+                $("#exampleModal").modal('hide');
+            }
+
+            function saveModal() {
+
+
+                var validation = true;
+
+                if ($('#inputUsuario').val() == "") {
+                    alert("Usuario Debe Ser LLenado");
+                    validation = false;
+                }
+                if ($('#inputTelefono').val() == "") {
+                    alert("Telefono Debe Ser LLenado");
+                    validation = false;
+                }
+                if ($('#inputEmail').val() == "") {
+                    alert("Email Debe Ser LLenado");
+                    validation = false;
+                }
+
+                var data = {
+                    Nombres: $('#inputNombre').val(),
+                    ApellidoPaterno: $('#inputApellidoP').val(),
+                    ApellidoMaterno: $('#inputApellidoM').val(),
+                    UsuarioName: $('#inputUsuario').val(),
+                    Email: $('#inputTelefono').val(),
+                    Telefono: $('#inputEmail').val()
+                };
+
+                if (validation == true) {
+
+                    $.ajax({
+                        url: "/Usuario/UsuarioAdd",
+                        type: "POST",
+                        dataType: "json",
+                        contentType: 'application/json',
+                        data: JSON.stringify(data),
+                        success: function (mydata) {
+                            console.log(mydata);
+                        }
+                    });
+
+                }
+
+                console.log(data);
+                document.getElementById("formUser").reset();
+                location.reload();
+                $("#exampleModal").modal('hide');
+            }
+
+            function editModal() {
+
+                var validation = true;
+
+                if ($('#inputUsuario').val() == "") {
+                    alert("Usuario Debe Ser LLenado");
+                    validation = false;
+                }
+                if ($('#inputTelefono').val() == "") {
+                    alert("Telefono Debe Ser LLenado");
+                    validation = false;
+                }
+                if ($('#inputEmail').val() == "") {
+                    alert("Email Debe Ser LLenado");
+                    validation = false;
+                }
+
+                var data = {
+                    IdUsuario: $('#inputId').val(),
+                    Nombres: $('#inputNombre').val(),
+                    ApellidoPaterno: $('#inputApellidoP').val(),
+                    ApellidoMaterno: $('#inputApellidoM').val(),
+                    UsuarioName: $('#inputUsuario').val(),
+                    Email: $('#inputTelefono').val(),
+                    Telefono: $('#inputEmail').val()
+                };
+
+                if (validation == true) {
+                    $.ajax({
+                        url: "/Usuario/UsuarioAdd",
+                        type: "POST",
+                        dataType: "json",
+                        contentType: 'application/json',
+                        data: JSON.stringify(data),
+                        success: function (mydata) {
+                            console.log(mydata);
+                        }
+                    });
+                }
+
+
+                console.log(data);
+                document.getElementById("formUser").reset();
+                location.reload();
+                $("#exampleModal").modal('hide');
+
+            }
+
+            function edit(id) {
+
+                document.getElementById("exampleModalLabel").innerHTML = "Editar Usuario";
+                document.getElementById("Action").setAttribute("onClick", "javascript: editModal();");
+
+                var data = {
+                    id: id,
+                };
+
+                $.ajax({
+                    url: "/Usuario/GetUser",
+                    type: "POST",
+                    dataType: "json",
+                    contentType: 'application/json',
+                    data: JSON.stringify(data),
+                    success: function (mydata) {
+                        console.log(mydata);
+                        $('#inputId').val(mydata.IdUsuario);
+                        $('#inputNombre').val(mydata.Nombres);
+                        $('#inputApellidoP').val(mydata.ApellidoPaterno);
+                        $('#inputApellidoM').val(mydata.ApellidoMaterno);
+                        $('#inputUsuario').val(mydata.UsuarioName);
+                        $('#inputTelefono').val(mydata.Telefono);
+                        $('#inputEmail').val(mydata.Email);
+                        $("#exampleModal").modal();
+                    }
+                });
+
+                console.log("Editar");
+                document.getElementById("formUser").reset();
+                $("#exampleModal").modal('hide');
+            }
+
+        </script>
+
+        <script>
+            function validateForm() {
+
+                if ($('#inputUsuario').val() == "") {
+                    alert("Usuario Debe Ser LLenado");
+                    return false;
+                }
+                if ($('#inputTelefono').val() == "") {
+                    alert("Telefono Debe Ser LLenado");
+                    return false;
+                }
+                if ($('#inputEmail').val() == "") {
+                    alert("Email Debe Ser LLenado");
+                    return false;
+                }
+            }
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+C:\Users\Ixban\Documents\Proyecto\DataLayer\bin\Debug\DataLayer.dll.config
+C:\Users\Ixban\Documents\Proyecto\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\Ixban\Documents\Proyecto\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\Ixban\Documents\Proyecto\DataLayer\bin\Debug\EntityFramework.dll
+C:\Users\Ixban\Documents\Proyecto\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ixban\Documents\Proyecto\DataLayer\bin\Debug\EntityFramework.xml
+C:\Users\Ixban\Documents\Proyecto\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ixban\Documents\Proyecto\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache
+C:\Users\Ixban\Documents\Proyecto\DataLayer\obj\Debug\DataLayer.Properties.Resources.resources
+C:\Users\Ixban\Documents\Proyecto\DataLayer\obj\Debug\DataLayer.csproj.GenerateResource.cache
+C:\Users\Ixban\Documents\Proyecto\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\Ixban\Documents\Proyecto\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+C:\Users\Ixban\Documents\Proyecto\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\Ixban\Documents\Proyecto\DataLayer\obj\Debug\DataLayer.pdb

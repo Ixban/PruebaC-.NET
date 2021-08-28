@@ -1,0 +1,93 @@
+﻿@model List<ML.LineasCelulares>
+<!-- expand-hover push -->
+<!-- Sidebar -->
+><!-- Sidebar End -->
+<!-- adminx-content-aside -->
+<div class="adminx-content">
+    <!-- <div class="adminx-aside">
+
+    </div> -->
+
+    <div class="adminx-main-content">
+        <div class="container-fluid">
+            <!-- BreadCrumb -->
+            <nav aria-label="breadcrumb" role="navigation">
+                <ol class="breadcrumb adminx-page-breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Celulares</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Listado De Celulares</li>
+                </ol>
+            </nav>
+
+            <div class="pb-3">
+                <h1>Listado De Celulares</h1>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="card mb-grid">
+                        <div class="table-responsive-md">
+                            <table class="table table-actions table-striped table-hover mb-0" data-table>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">
+                                            <label class="custom-control custom-checkbox m-0 p-0">
+                                                <input type="checkbox" class="custom-control-input table-select-all">
+                                                <span class="custom-control-indicator"></span>
+                                            </label>
+                                        </th>
+                                        <th scope="col">Mobile Line</th>
+                                        <th scope="col">Descripcion</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model.Count > 0)
+                                    {
+
+                                        foreach (ML.LineasCelulares Linea in Model)
+                                        {
+                                            <tr>
+                                                <th scope="row">
+                                                    <label class="custom-control custom-checkbox m-0 p-0">
+                                                        <input type="checkbox" class="custom-control-input table-select-row">
+                                                        <span class="custom-control-indicator"></span>
+                                                    </label>
+                                                </th>
+                                                <td> <a href="@Url.Action("Index", "Detail", new { FilterNumero = Convert.ToString(Linea.MobileLine) , FilterDescripcion = "None" } ) ">@Linea.MobileLine</a></td>
+                                                <td><a href="@Url.Action("Index", "Detail", new { FilterNumero = "None" , FilterDescripcion = Convert.ToString(Linea.Description) } ) ">@Linea.Description</a></td>
+                                            </tr>
+                                        }
+
+
+
+
+                                    }
+                                    else
+                                    {
+                                        <tr>
+                                            <th scope="row">
+                                                <label class="custom-control custom-checkbox m-0 p-0">
+                                                    <input type="checkbox" class="custom-control-input table-select-row">
+                                                    <span class="custom-control-indicator"></span>
+                                                </label>
+                                            </th>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    }
+
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
